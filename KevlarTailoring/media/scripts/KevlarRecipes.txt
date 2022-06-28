@@ -1,0 +1,20 @@
+module KevlarTailoring
+{
+    imports
+    {
+        Base
+    }
+
+    recipe Rip Clothing
+    {
+        Vest_BulletArmy/Vest_BulletCivilian/Vest_BulletPolice,
+        keep [Recipe.GetItemTypes.Scissors],
+
+        Result:KevlarStrips,
+        RemoveResultItem:true,
+        Sound:ClothesRipping,
+        Time:100.0,
+        AnimNode:RipSheets,
+        OnCreate:Recipe.OnCreate.RipClothing,
+    }
+}

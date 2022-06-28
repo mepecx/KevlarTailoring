@@ -1,0 +1,94 @@
+module KevlarTailoring
+{
+    imports
+    {
+        Base
+    }
+
+    item KevlarStrips
+    {
+        DisplayCategory = Material,
+        CanBandage	=	TRUE,
+        Weight	=	0.08,
+        AlwaysWelcomeGift	=	TRUE,
+        Type	=	Normal,
+        DisplayName	=	Kevlar Strips,
+        ReplaceOnUse    =   KevlarStripsDirty,
+        Icon	=	DenimStrips,
+        BandagePower    =   2,
+        Tooltip = Tooltip_RippedSheets,
+        FabricType = Kevlar,
+        WorldStaticModel = DenimStrips,
+    }
+
+    item KevlarStripsDirty
+    {
+        DisplayCategory = Material,
+        CanBandage	=	TRUE,
+        Weight	=	0.08,
+        AlwaysWelcomeGift	=	TRUE,
+        Type	=	Normal,
+        DisplayName	=	Dirty Kevlar Strips,
+        Icon	=	DenimStrips,
+        BandagePower    =   0.5,
+        CanBandage	=	TRUE,
+        WorldStaticModel = DenimStripsDirty,  
+    }
+}
+
+module Base
+{
+    item Vest_BulletArmy
+    {
+        DisplayCategory = Clothing,
+        Type = Clothing,
+        DisplayName = Military Bulletproof Vest,
+        ClothingItem = Vest_BulletArmy,
+        BodyLocation = TorsoExtra,
+        Icon = BulletVestCamo,
+        BloodLocation = ShirtNoSleeves,
+        Insulation = 0.75,
+        WindResistance = 0.45,
+        FabricType = Kevlar,
+        BiteDefense = 30,
+        ScratchDefense = 55,
+        BulletDefense = 100,
+        WorldStaticModel = BulletVest_Ground,
+    }
+
+    item Vest_BulletCivilian
+    {
+        DisplayCategory = Clothing,
+        Type = Clothing,
+        DisplayName = Civilian Bulletproof Vest,
+        ClothingItem = Vest_BulletCivilian,
+        BodyLocation = TorsoExtra,
+        Icon = BulletVestWhite,
+        BloodLocation = ShirtNoSleeves,
+        Insulation = 0.6,
+        WindResistance = 0.25,
+        FabricType = Kevlar,
+        BiteDefense = 30,
+        ScratchDefense = 55,
+        BulletDefense = 100,
+        WorldStaticModel = BulletVest_Ground,
+    }
+
+    item Vest_BulletPolice
+    {
+        DisplayCategory = Clothing,
+        Type = Clothing,
+        DisplayName = Police Bulletproof Vest,
+        ClothingItem = Vest_BulletPolice,
+        BodyLocation = TorsoExtra,
+        Icon = BulletVestPolice,
+        BloodLocation = ShirtNoSleeves,
+        Insulation = 0.65,
+        WindResistance = 0.30,
+        FabricType = Kevlar,
+        BiteDefense = 30,
+        ScratchDefense = 55,
+        BulletDefense = 100,
+        WorldStaticModel = BulletVest_Ground,
+    }
+}
